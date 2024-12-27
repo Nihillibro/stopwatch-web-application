@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Background Image */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('nihil.jpg') no-repeat center center fixed; /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container Styling */
+#container {
+    text-align: center;
+    background: rgba(18, 11, 11, 0.8);
+    border-radius: 0px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    position: relative;
+    animation: bounceIn 1.2s ease-in-out;
+}
+
+/* Header Animation */
+.animate-charcter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6a95;
+    text-transform: uppercase;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    margin-bottom: 20px;
+}
+
+/* Glowing Text */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff6a95, 0 0 20px #ff6a95;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff2e63, 0 0 30px #ff2e63;
+    }
+}
+
+/* Watch Display Styling */
+#watch {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    background: linear-gradient(90deg, #ff6a95, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+    border-radius: 0px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons Container */
+#btns {
+    margin-top: 20px;
+}
+
+/* Buttons Styling */
+#btns button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 25px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Background Animation */
+#btns button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, #ff6a95, #fad0c4);
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Start Button */
+#start {
+    color: white;
+    background: #28a745;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#start:hover::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+#start:hover {
+    color: #fff;
+}
+
+/* Stop Button */
+#stop {
+    color: white;
+    background: #dc3545;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#stop:hover::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+#stop:hover {
+    color: #fff;
+}
+
+/* Reset Button */
+#reset {
+    color: black;
+    background: #ffc107;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+#reset:hover {
+    color: #fff;
+}
+
+/* Button Pressed Effect */
+#btns button:active {
+    transform: scale(0.95);
+}
+
+/* Entry Animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
